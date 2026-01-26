@@ -1,0 +1,142 @@
+* { box-sizing: border-box; }
+
+:root{
+  --bg: #f0f2f5;
+  --text: #1c1e21;
+  --muted: #606770;
+  --card: #ffffff;
+  --border: #dddfe2;
+  --blue: #1877f2;
+  --green: #42b72a;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page{
+  min-height: 100vh;
+  display: grid;
+  place-items: center; /* center both horizontally & vertically */
+  padding: 24px;
+}
+
+.shell{
+  width: min(980px, 100%);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.logo{
+  margin: 0;
+  font-size: 56px;
+  letter-spacing: -1px;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.tagline{
+  margin: 12px 0 0;
+  font-size: 20px;
+  color: var(--text);
+  max-width: 420px;
+}
+
+.card{
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.form{ display: grid; gap: 12px; }
+
+.field label{
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.field input{
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+}
+
+.field input:focus{
+  border-color: rgba(24,119,242,.6);
+  box-shadow: 0 0 0 3px rgba(24,119,242,.15);
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-primary{ background: var(--blue); color: #fff; }
+.btn-primary:hover{ filter: brightness(0.95); }
+
+.link{
+  text-align: center;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 14px;
+}
+.link:hover{ text-decoration: underline; }
+
+.divider{
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.btn-green{
+  background: var(--green);
+  color: #fff;
+  width: fit-content;
+  justify-self: center;
+  padding-inline: 18px;
+}
+.btn-green:hover{ filter: brightness(0.95); }
+
+.below{
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.below-link{
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+.below-link:hover{ text-decoration: underline; }
+
+@media (max-width: 900px){
+  .shell{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+  .tagline{ margin-inline: auto; }
+}

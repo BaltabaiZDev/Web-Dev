@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 2 — Instagram Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page" aria-label="Instagram login page mock">
+    <section class="layout">
+      <section class="mock" aria-label="Phone mockup (optional)">
+        <div class="mock-card" role="img" aria-label="Mock image placeholder">
+          <div class="mock-bubble">Mock image</div>
+          <p class="mock-text">You can replace this block with a real image later.</p>
+        </div>
+      </section>
+
+      <section class="auth" aria-label="Login panel">
+        <section class="panel" aria-label="Instagram login box">
+          <h1 class="ig-logo" aria-label="Instagram">Instagram</h1>
+
+          <form class="form" action="#" method="post" aria-label="Instagram login form">
+            <div class="field">
+              <label for="ig-user">Phone number, username, or email</label>
+              <input id="ig-user" name="user" type="text" autocomplete="username" required
+                     placeholder="Phone number, username, or email" />
+            </div>
+
+            <div class="field">
+              <label for="ig-pass">Password</label>
+              <input id="ig-pass" name="password" type="password" autocomplete="current-password" required
+                     placeholder="Password" />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Log in</button>
+
+            <div class="or" role="separator" aria-label="OR separator">
+              <span class="line"></span>
+              <span class="or-text">OR</span>
+              <span class="line"></span>
+            </div>
+
+            <a class="social" href="#" aria-label="Log in with Facebook">
+              <span class="fb-dot" aria-hidden="true"></span>
+              Log in with Facebook
+            </a>
+
+            <a class="forgot" href="#" aria-label="Forgot password link">Forgot password?</a>
+          </form>
+        </section>
+
+        <section class="panel panel-small" aria-label="Sign up prompt">
+          <p>
+            Don't have an account?
+            <a class="signup" href="#" aria-label="Sign up link">Sign up</a>
+          </p>
+        </section>
+
+        <footer class="footer" aria-label="Footer">
+          <p class="footer-text">© 2026 Instagram (mock)</p>
+        </footer>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
