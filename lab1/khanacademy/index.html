@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab1 - Khan Academy</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.6; }
+    header { margin-bottom: 18px; }
+    .subtitle { color: #555; margin-top: 6px; }
+    .card { border: 1px solid #ddd; padding: 16px; border-radius: 12px; margin: 12px 0; }
+    .note { background: #f6f6f6; padding: 10px; border-radius: 10px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; background: #1a73e8; color: #fff; text-decoration: none; }
+    .btn:hover { opacity: .9; }
+
+    /* selectors demo */
+    #featured { border-color: #1a73e8; }
+    .highlight { background: #fff3cd; padding: 2px 6px; border-radius: 6px; }
+    .card p { margin: 6px 0; }
+    .card > h2 { margin-top: 0; }
+    a[target="_blank"] { text-decoration-style: dotted; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #f1f1f1; }
+
+    label { display: block; margin-top: 10px; }
+    input, select, textarea {
+      width: 100%; padding: 10px; margin-top: 6px;
+      border: 1px solid #ccc; border-radius: 10px;
+    }
+    button { margin-top: 12px; border: 0; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lab 1 — Khan Academy (All-in-one)</h1>
+    <p class="subtitle">Intro to HTML → More CSS selectors (practice summary)</p>
+  </header>
+
+  <section class="card" id="featured">
+    <h2>1) Basic HTML</h2>
+    <p>Hello! My name is <span class="highlight">Kazybek</span>.</p>
+    <p class="note">This page contains headings, paragraphs, links, images, lists, tables, forms, and CSS selectors.</p>
+    <a class="btn" href="https://developer.mozilla.org/" target="_blank">Open MDN</a>
+  </section>
+
+  <section class="card">
+    <h2>2) Text + Image</h2>
+    <p><strong>Bold</strong>, <em>italic</em>, <u>underline</u>, and a line break:<br />second line.</p>
+    <img src="https://via.placeholder.com/520x180" alt="placeholder" />
+  </section>
+
+  <section class="card">
+    <h2>3) Lists</h2>
+    <h3>Unordered</h3>
+    <ul>
+      <li>HTML tags</li>
+      <li>CSS basics</li>
+      <li>Selectors</li>
+    </ul>
+
+    <h3>Ordered</h3>
+    <ol>
+      <li>Learn</li>
+      <li>Practice</li>
+      <li>Commit</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>4) Table</h2>
+    <table>
+      <thead>
+        <tr><th>Topic</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>HTML</td><td>Done</td></tr>
+        <tr><td>CSS</td><td>In progress</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>5) Form</h2>
+    <form>
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your name" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="example@mail.com" />
+      </label>
+
+      <label>
+        Topic
+        <select name="topic">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>Both</option>
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="4" placeholder="Write something..."></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
