@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,45 +7,112 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page" aria-label="Facebook login page mock">
-    <section class="shell" aria-label="Login content">
-      <div class="brand" aria-label="Facebook info">
-        <h1 class="logo" aria-label="Facebook">facebook</h1>
-        <p class="tagline">
-          Facebook helps you connect and share with the people in your life.
-        </p>
-      </div>
+  <div class="app">
+    <main class="content" aria-label="Facebook login page mock">
+      <section class="shell" aria-label="Login content">
+        <div class="brand" aria-label="Facebook info">
+          <h1 class="logo" aria-label="Facebook">facebook</h1>
+          <p class="tagline">
+            Facebook помогает вам всегда<br>
+            оставаться на связи и общаться со<br>
+            своими знакомыми.
+          </p>
+        </div>
 
-      <section class="card" aria-label="Login card">
-        <form class="form" action="#" method="post" aria-label="Login form">
-          <div class="field">
-            <label for="email">Email address or phone number</label>
-            <input id="email" name="email" type="text" autocomplete="username" required
-                   placeholder="Email address or phone number" />
-          </div>
+        <section class="right" aria-label="Login side">
+          <section class="card" aria-label="Login card">
+            <form class="form" action="#" method="post" aria-label="Login form">
+              <input
+                class="input"
+                id="email"
+                name="email"
+                type="text"
+                autocomplete="username"
+                required
+                placeholder="Электронный адрес или номер телефона"
+              />
 
-          <div class="field">
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" autocomplete="current-password" required
-                   placeholder="Password" />
-          </div>
+              <input
+                class="input"
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                placeholder="Пароль"
+              />
 
-          <button class="btn btn-primary" type="submit">Log In</button>
+              <button class="btn btn-primary" type="submit">Вход</button>
 
-          <a class="link" href="#" aria-label="Forgot password link">Forgot password?</a>
+              <a class="forgot" href="#" aria-label="Forgot password link">Забыли пароль?</a>
 
-          <div class="divider" role="separator" aria-label="Divider"></div>
+              <div class="divider" role="separator" aria-label="Divider"></div>
 
-          <a class="btn btn-green" href="#" role="button" aria-label="Create new account link">
-            Create new account
-          </a>
-        </form>
+              <a class="btn btn-green" href="#" role="button" aria-label="Create new account link">
+                Создать новый аккаунт
+              </a>
+            </form>
+          </section>
 
-        <p class="below">
-          <a href="#" class="below-link">Create a Page</a> for a celebrity, brand or business.
-        </p>
+          <p class="below">
+            <a href="#" class="below-link">Создать Страницу</a> знаменитости, музыкальной группы<br>
+            или компании.
+          </p>
+        </section>
       </section>
-    </section>
-  </main>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+      <div class="footer-inner">
+        <div class="langs" aria-label="Languages">
+          <a href="#">Русский</a>
+          <a href="#">Қазақша</a>
+          <a href="#">English (US)</a>
+          <a href="#">Türkçe</a>
+          <a href="#">Bahasa Indonesia</a>
+          <a href="#">中文(简体)</a>
+          <a href="#">Deutsch</a>
+          <a href="#">한국어</a>
+          <a href="#">Shqip</a>
+          <a href="#">Español</a>
+          <a href="#">Português (Brasil)</a>
+          <button class="more" aria-label="More languages">+</button>
+        </div>
+
+        <div class="links" aria-label="Links">
+          <a href="#">Зарегистрироваться</a>
+          <a href="#">Вход</a>
+          <a href="#">Messenger</a>
+          <a href="#">Facebook Lite</a>
+          <a href="#">Видео</a>
+          <a href="#">Места</a>
+          <a href="#">Игры</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Meta Pay</a>
+          <a href="#">Магазин Meta</a>
+          <a href="#">Meta Quest</a>
+          <a href="#">Meta AI</a>
+          <a href="#">Instagram</a>
+          <a href="#">Threads</a>
+          <a href="#">Благотворительные акции</a>
+          <a href="#">Услуги</a>
+          <a href="#">Центр информации о выборах</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Центр конфиденциальности</a>
+          <a href="#">Группы</a>
+          <a href="#">Информация</a>
+          <a href="#">Создать рекламу</a>
+          <a href="#">Создать Страницу</a>
+          <a href="#">Разработчикам</a>
+          <a href="#">Вакансии</a>
+          <a href="#">Файлы cookie</a>
+          <a href="#">Рекламные предпочтения</a>
+          <a href="#">Условия использования</a>
+        </div>
+
+        <div class="copy">Meta © 2026</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,60 +8,117 @@
 </head>
 <body>
   <main class="page" aria-label="Instagram login page mock">
-    <section class="layout">
-      <section class="mock" aria-label="Phone mockup (optional)">
-        <div class="mock-card" role="img" aria-label="Mock image placeholder">
-          <div class="mock-bubble">Mock image</div>
-          <p class="mock-text">You can replace this block with a real image later.</p>
-        </div>
+    <div class="frame">
+
+      <!-- ICON (сол жақ жоғарыда тұрады) -->
+      <div class="ig-mark">
+        <img
+          class="ig-logo-img"
+          src="data:image/png;base64,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"
+          width="96"
+          height="96"
+          alt="Instagram"
+        />
+      </div>
+
+      <!-- LEFT -->
+      <section class="left" aria-label="Promo panel">
+        <h2 class="promo-title">
+          Посмотрите, какими<br/>
+          моментами из жизни<br/>
+          поделились ваши <span class="accent-warm">близкие</span><br/>
+          <span class="accent-pink">друзья.</span>
+        </h2>
+
+        <img
+          class="promo-image"
+          src="https://static.cdninstagram.com/rsrc.php/v4/yt/r/pAv7hjq-51n.png"
+          alt="Stories collage mock"
+        />
       </section>
 
-      <section class="auth" aria-label="Login panel">
-        <section class="panel" aria-label="Instagram login box">
-          <h1 class="ig-logo" aria-label="Instagram">Instagram</h1>
+      <!-- CENTER DIVIDER -->
+      <div class="divider" aria-hidden="true"></div>
+
+      <!-- RIGHT -->
+      <section class="right" aria-label="Login panel">
+        <div class="login">
+          <h3 class="login-title">Войти в Instagram</h3>
 
           <form class="form" action="#" method="post" aria-label="Instagram login form">
-            <div class="field">
-              <label for="ig-user">Phone number, username, or email</label>
-              <input id="ig-user" name="user" type="text" autocomplete="username" required
-                     placeholder="Phone number, username, or email" />
-            </div>
+            <label class="label" for="ig-user">Имя пользователя, номер мобильного телефона или электронный адрес</label>
+            <input
+              id="ig-user"
+              name="user"
+              type="text"
+              autocomplete="username"
+              placeholder="Имя пользователя, номер мобильного телефона или электронн..."
+              required
+            />
 
-            <div class="field">
-              <label for="ig-pass">Password</label>
-              <input id="ig-pass" name="password" type="password" autocomplete="current-password" required
-                     placeholder="Password" />
-            </div>
+            <label class="label" for="ig-pass">Пароль</label>
+            <input
+              id="ig-pass"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Пароль"
+              required
+            />
 
-            <button class="btn btn-primary" type="submit">Log in</button>
+            <button class="btn btn-primary" type="submit">Войти</button>
 
-            <div class="or" role="separator" aria-label="OR separator">
-              <span class="line"></span>
-              <span class="or-text">OR</span>
-              <span class="line"></span>
-            </div>
+            <a class="forgot" href="#">Забыли пароль?</a>
 
-            <a class="social" href="#" aria-label="Log in with Facebook">
-              <span class="fb-dot" aria-hidden="true"></span>
-              Log in with Facebook
+            <div class="spacer"></div>
+
+<a class="btn btn-fb" href="#" aria-label="Log in with Facebook">
+  <img class="fb-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1280px-2023_Facebook_icon.svg.png?20231011122028" alt="" aria-hidden="true">
+  Войти через Facebook
+</a>
+
+
+            <a class="btn btn-outline" href="#" aria-label="Create new account">
+              Создать новый аккаунт
             </a>
 
-            <a class="forgot" href="#" aria-label="Forgot password link">Forgot password?</a>
+<div class="meta">
+  <img
+    class="meta-logo-img"
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAACUCAMAAAAOCP0eAAAAz1BMVEX///8AAADu7++SkpP8/PxJUlc2QUcAAAkAAA/m5+epra8AePoAfvoAXN4AevoAfPp+foDKzM4Ab/oAWN0AYN8AEh8AABQAcvrR0dIAZODa2ttVXGDDxMXT5f729vYVJi8ATdwgLTVuc3e10f0Aa/orh/qGhojK2PaOre22yvPo8f2YwfyFt/zz+P9Nf+SAsvy/2P0SDxEAQNuvwPFLmvsBHSggauBhh+VqlehvpfuAnOlfn/uboKHe5/mXs+1iaGxDfOpVkfZDRUYYGSI1NjrQB4IHAAADn0lEQVR4nO3XeXOiSBgG8G4ElRa8EJFDsFHQeCUzie44Ykyc+f6faaEbTXZTtVO1VRtmq57fH1ZzmOrHt68QAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/Nl8s7lTZXK7W0021vfn3llvLNK3BvGjfO61WK3m4PlIuX2h2ezH0v9Da37+tBEz5lG7+2smyTMsaDL4+EvLktJ+OnZYzLZ8p2m5X713fDChvfkjSu9DRp/X1Hy33lvnH3fyb636dr2fJOL9zaLXLquRJeKNWDrwwirj9MYn2uyRZTMzvRVcf967pGOPi1unoHJfiYZEk4oF8M6PRtSahoutK8a0wDDQahKEYYKq8qyjh58fICzAxtyfRet671krenCZ9MWvyJLYf067oZ0h57DdEEj3ThkM/nx8qO/t858fxOY+lMH9n+4Een4Mqkjxb+2fZUl9ccyGbm4Nzv5FJmmnAbdGztKF5mkji1WmkaTaNFZI1Is6jKKIhUbp0yOucxpyyKpK8mC+yJGRqDPamLAVZdZLlNYmS0rOe14HaTKkXSXS/oWWjUcbtVB2xWn1YYyxT1SyvGQtY144aVSRRJ+6rbJ1enW+mu5V7yUMyO5VJuiSoU6aS81BTdZEki3aiSIxqHiEjjXrFlT7cxcUoVLrV1OQ0a93L1n0nOW0Hrhxq49fZwy1JmNp1pWfTHhFJwpjGYjULOWdva1dA63J6jH5WkuRhZshZPk1mU3KauHKsLY/9R7VMohJPo1k+9YlM4vm2nwr1Yk0uk+SDy9fFX/KqSTKdGWIXzBfep3xgLSz3e3G5OfZXb0lILeIR1W9JdjYtpW9JavSsVJnkri9qoq47Yt3dDNz948ckukZpl5RJ9DOteSX996nJeGYciNhA1mKuzyfudizmiShVmYT0WKZck5Au1d5tfXkSMT9GlMsAQUWrcN9IpptV0krE7p7vJNbgdbw8GP3b2iVmtyo+ZRLGm11xLyt67PnyVKlwWyuKM7pUswqTdd9oOe1O53r8Xe7dtuO0ncN1Z+yqby/LJCQe2lEt3zjopeh6bA/91A9Jj0a239WGFe0nhBwdw+gYt3M8WSZ5sFZyPXfRvyTh8vdPf9gN2rR/ih6PLrv8Kh9vbLizm00eXKoZXfkcORzXp3fXm+nx6bn8ZysMWO/do5Axee7Vs9hPr6er/CIuj2PnmIVqwLz/vtcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/2t/AtbcU0zBDQe1AAAAAElFTkSuQmCC"
+    alt="Meta"
+  />
+</div>
+
           </form>
-        </section>
-
-        <section class="panel panel-small" aria-label="Sign up prompt">
-          <p>
-            Don't have an account?
-            <a class="signup" href="#" aria-label="Sign up link">Sign up</a>
-          </p>
-        </section>
-
-        <footer class="footer" aria-label="Footer">
-          <p class="footer-text">© 2026 Instagram (mock)</p>
-        </footer>
+        </div>
       </section>
-    </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Footer links">
+      <nav class="footer-links" aria-label="Instagram footer links">
+        <a href="#">Meta</a>
+        <a href="#">Информация</a>
+        <a href="#">Блог</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Помощь</a>
+        <a href="#">API</a>
+        <a href="#">Конфиденциальность</a>
+        <a href="#">Условия</a>
+        <a href="#">Места</a>
+        <a href="#">Instagram Lite</a>
+        <a href="#">Meta AI</a>
+        <a href="#">Threads</a>
+        <a href="#">Загрузка контактов и лица, не являющиеся пользователями</a>
+        <a href="#">Meta Verified</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <span>Русский</span>
+        <span>© 2026 Instagram from Meta</span>
+      </div>
+    </footer>
   </main>
 </body>
 </html>

@@ -1,13 +1,16 @@
 * { box-sizing: border-box; }
 
 :root{
-  --bg: #fafafa;
+  --bg: #ffffff;
   --text: #262626;
   --muted: #8e8e8e;
-  --card: #ffffff;
+
   --border: #dbdbdb;
-  --blue: #4cb5f9;
-  --blue2: #0095f6;
+
+  --blue: #0095f6;
+
+  --warm: #ff4d4d;
+  --pink: #ff2aa1;
 }
 
 body{
@@ -20,145 +23,229 @@ body{
 .page{
   min-height: 100vh;
   display: grid;
-  place-items: center;
-  padding: 24px;
+  grid-template-rows: 1fr auto;
 }
 
-.layout{
-  width: min(980px, 100%);
+/* IMPORTANT: frame relative — icon absolute осыған байланады */
+.frame{
+  position: relative;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 28px 22px 10px;
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 32px;
+  grid-template-columns: 1fr 1px 420px;
+  gap: 0;
   align-items: center;
 }
 
-.mock-card{
-  height: 460px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(0,149,246,.08), rgba(252,175,69,.10));
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  text-align: center;
+.divider{
+  height: 100%;
+  background: #eee;
 }
 
-.mock-bubble{
-  font-weight: 800;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px dashed rgba(0,0,0,.2);
-  background: rgba(255,255,255,.7);
+/* ICON */
+.ig-mark{
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  width: 96px;
+  height: 96px;
+  z-index: 10;
+  background: transparent;
 }
 
-.mock-text{ color: var(--muted); margin: 10px 0 0; }
-
-.auth{ display: grid; gap: 12px; }
-
-.panel{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 18px;
-}
-
-.ig-logo{
-  margin: 6px 0 18px;
-  text-align: center;
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-.form{ display: grid; gap: 10px; }
-
-.field label{
+.ig-logo-img{
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
   display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 6px;
 }
 
-.field input{
+.left{
+  min-height: 520px;
+  padding: 28px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* мәтін + сурет ортасына */
+}
+
+
+.promo-title{
+  margin: 40px 0 18px;
+  text-align: center;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.22;
+  font-size: 30px;
+  letter-spacing: -0.2px;
+}
+
+.accent-warm{ color: var(--warm); }
+.accent-pink{ color: var(--pink); }
+
+.promo-image{
+  width: min(520px, 78%);
+  max-width: 560px;
+  height: auto;
+
+  display: block;
+  margin: 6px auto 0;   /* 1 колонка болып ортасына келеді */
+
+  border-radius: 18px;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.12));
+}
+
+
+/* RIGHT */
+.right{
+  display: grid;
+  align-content: start;
+  padding: 120px 40px 0;
+}
+
+.login{ width: 100%; }
+
+.login-title{
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #111;
+  font-weight: 600;
+}
+
+.form{
+  display: grid;
+  gap: 10px;
+}
+
+.label{
+  font-size: 11px;
+  color: transparent;
+  height: 0;
+  overflow: hidden;
+}
+
+.form input{
   width: 100%;
-  padding: 12px 10px;
-  border-radius: 6px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
   border: 1px solid var(--border);
-  background: #fafafa;
+  background: #fff;
+  font-size: 12px;
   outline: none;
-  font-size: 14px;
 }
 
-.field input:focus{
+.form input:focus{
   border-color: rgba(0,149,246,.55);
-  box-shadow: 0 0 0 3px rgba(0,149,246,.15);
+  box-shadow: 0 0 0 3px rgba(0,149,246,.12);
 }
 
 .btn{
   width: 100%;
-  border: 0;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-weight: 800;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .btn-primary{
-  background: var(--blue2);
+  background: rgba(0,149,246,.35);
   color: #fff;
+  border-color: rgba(0,149,246,.18);
 }
-.btn-primary:hover{ filter: brightness(.95); }
-
-.or{
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 12px;
-  align-items: center;
-  margin: 10px 0 6px;
-}
-
-.line{ height: 1px; background: var(--border); }
-.or-text{ color: var(--muted); font-weight: 800; font-size: 12px; }
-
-.social{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: #385185;
-  text-decoration: none;
-  font-weight: 800;
-  padding: 8px 0;
-}
-
-.fb-dot{
-  width: 18px; height: 18px;
-  border-radius: 4px;
-  background: #1877f2;
-  display: inline-block;
-}
+.btn-primary:hover{ filter: brightness(.98); }
 
 .forgot{
+  margin-top: 2px;
   text-align: center;
-  color: #00376b;
+  font-size: 11px;
+  color: #111;
   text-decoration: none;
-  font-size: 12px;
-  margin-top: 6px;
 }
 .forgot:hover{ text-decoration: underline; }
 
-.panel-small{ text-align: center; }
-.signup{
-  color: var(--blue2);
-  font-weight: 800;
+.spacer{ height: 18px; }
+
+.btn-fb{
+  background: #fff;
+  border: 1px solid #dfe3ee;
+  color: #385185;
+}
+.btn-fb:hover{ background: #fafafa; }
+.fb-icon{
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+}
+
+
+.btn-outline{
+  background: #fff;
+  border: 1px solid #dfe3ee;
+  color: var(--blue);
+}
+.btn-outline:hover{ background: #fafafa; }
+
+.meta{
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.meta-logo-img{
+  width: 120px; 
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* FOOTER */
+.footer{
+  border-top: 1px solid #f0f0f0;
+  padding: 16px 18px 22px;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: center;
+  font-size: 10px;
+  color: #8e8e8e;
+}
+.footer-links a{
+  color: #8e8e8e;
   text-decoration: none;
 }
-.signup:hover{ text-decoration: underline; }
+.footer-links a:hover{ text-decoration: underline; }
 
-.footer{ text-align: center; }
-.footer-text{ color: var(--muted); font-size: 12px; margin: 8px 0 0; }
+.footer-bottom{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 10px;
+  color: #8e8e8e;
+}
 
-@media (max-width: 920px){
-  .layout{ grid-template-columns: 1fr; }
-  .mock{ display: none; }
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .frame{ grid-template-columns: 1fr; }
+  .divider{ display: none; }
+  .left{ display: none; }
+  .ig-mark{ display: none; } /* мобилкада сол жақ блок жоқ болған соң иконка да жасырамыз */
+  .right{
+    padding: 40px 18px 0;
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }
