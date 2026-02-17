@@ -184,7 +184,7 @@ h1{
   position:relative;
 }
 .card .inner{
-  padding:18px 18px 12px;
+  padding:50px 18px 12px;
   text-align:center;
 }
 .card h3{
@@ -208,12 +208,12 @@ h1{
 }
 .price .currency{
   font-weight:700;
-  font-size:14px;
+  font-size:28px;
   color:var(--muted);
 }
 .price .big{
-  font-size:40px;
-  font-weight:800;
+  font-size:48px;
+  font-weight:380;
   letter-spacing:-.02em;
 }
 .price .unit{
@@ -225,6 +225,13 @@ h1{
   font-size:11px;
   color:var(--muted);
   margin-top:2px;
+}.price .code{
+  font-size:28px;
+  font-weight:400;
+  letter-spacing:.08em;
+  color:var(--text);
+  transform: translateY(-12px); /* ✅ USD жоғарырақ тұрады */
+  margin-left:2px;              /* ✅ тым жабысып кетпесін */
 }
 
 .btn{
@@ -275,22 +282,9 @@ h1{
 .list{
   padding:0 18px 18px;
 }
-.list ul{
-  margin:10px 0 0;
-  padding-left:18px;
-  color:var(--text);
-  font-size:12.8px;
-  line-height:1.5;
-}
-.list li{
-  margin:8px 0;
-}
 .small-title{
   margin-top:10px;
   font-size:11px;
-  color:var(--muted);
-}
-.muted-ul{
   color:var(--muted);
 }
 
@@ -304,18 +298,140 @@ h1{
   top:0;
   left:0;
   right:0;
+  border-radius: 10;
   text-align:center;
-  background:rgba(9,105,218,.08);
-  color:var(--blue);
+  background:rgba(9,105,218);
+  color:white;
   font-weight:700;
   font-size:11px;
   letter-spacing:.08em;
   padding:8px 10px;
-  border-bottom:1px solid rgba(9,105,218,.18);
+  border-bottom:1px solid rgba(239, 239, 239, 0.18);
 }
 
+/* Inline link inside accordion text */
+
+/* ===== FIXED + TIGHTER GITHUB ACCORDION ===== */
+
+.gh-acc{
+  margin-top: 8px;
+}
+
+.gh-acc details{
+  border: 0px solid transparent;
+  border-radius: 8px;
+  padding: 5px 7px;   
+  margin: 3px 0;      
+  transition: all .15s ease;
+}
+.small-title-back{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.small-title-back::before{
+  content:"←";
+  font-size:16px;
+  line-height:1;
+  color:var(--muted);
+}
+
+.gh-acc details:hover{
+  background: rgba(234,238,242,.45);
+}
+
+.gh-acc details[open]{
+  background: #fff;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.gh-acc summary{
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  column-gap: 10px;
+  row-gap: 2px;          /* азайттық */
+  align-items: start;
+}
+
+.gh-acc summary::-webkit-details-marker{ display: none; }
+
+/* arrow (grid item) */
+.gh-acc summary::before{
+  content: "›";
+  font-size: 20px;
+  color: var(--muted);
+  transform: translateY(1px);
+  transition: transform .18s ease;
+}
+
+.gh-acc details[open] summary::before{
+  transform: rotate(90deg) translateY(-1px);
+}
+
+/* ✅ МІНЕ ОСЫ ЕҢ МАҢЫЗДЫ FIX:
+   title + note әрқашан 2-бағанға түседі */
+.gh-acc .title,
+.gh-acc .note{
+  grid-column: 2;
+  min-width: 0;
+}
+
+.gh-acc .title{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.gh-acc .note{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 1px;
+  white-space: nowrap;        /* ✅ бір жолға */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gh-acc .body{
+  margin-top: 8px;            /* азайттық */
+  padding-left: 26px;         /* азайттық */
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.gh-acc .section{
+  margin: 10px 0 4px;         /* азайттық */
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--blue);
+}
+.gh-acc summary:focus,
+.gh-acc summary:focus-visible{
+  outline: none;
+}
+
+
+
+.gh-acc details[open]{
+  border: 0px solid var(--blue);
+  box-shadow: none;            
+}
+
+.gh-acc details{
+  overflow: hidden;            
+}
+
+
+
+
+
 /* Responsive */
-@media (max-width: 980px){
+@media (max-width: 520){
   .search{display:none;}
   h1{font-size:36px;}
 }
