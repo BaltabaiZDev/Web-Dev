@@ -94,11 +94,6 @@
     max-width: 900px;
 }
 
-.content-label{
-    direction: ltr;
-    flex: content;
-    hyphens: manual;
-}
 
 .delete-btn {
     background: none;

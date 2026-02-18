@@ -12,8 +12,6 @@
     <p id="header-title">ToDo List</p>
   </header>
 
-  
-
   <div class="paragraph-container">
     <h1>To Do List</h1>
   </div>
@@ -23,6 +21,10 @@
       <form id="todo-form">
         <input type="text" id="todo-input" placeholder="New task" required />
         <button type="submit">Add</button>
+
+        <!-- NEW: Filter buttons -->
+        <button type="button" class="filter-btn" id="filter-done">Done only</button>
+        <button type="button" class="filter-btn" id="filter-active">Todo only</button>
       </form>
     </div>
 
@@ -31,7 +33,6 @@
     </div>
   </main>
 
-  <!-- script ең төменде -->
   <script src="script.js"></script>
 </body>
 </html>
