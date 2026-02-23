@@ -1,38 +1,18 @@
-# Lab 4 - Online Store
+# Online Store (Angular Lab 4 - Task 2)
 
-## Project Structure
+Бұл жоба Angular Lab 4 тапсырмасы үшін жасалған "Online Store" қосымшасы.
 
-- `online-store/` - Angular frontend application
-- `server/` - Express backend server
+## Функционал
+- 10+ тауар карточкасы
+- Product model (TypeScript interface)
+- Responsive layout (CSS Grid)
+- Routing (Home / Products)
+- Share buttons (WhatsApp / Telegram)
+- Product image gallery (thumbnail + prev/next)
+- Angular control flow: `@for`, `@if`
+- Signal-based component communication: `input()` / `output()`
 
-## Running the Project
-
-### Prerequisites
-
-Make sure you have Node.js and npm installed.
-
-### Backend Server
-
+## Іске қосу
 ```bash
-cd server
 npm install
-npm run dev
-```
-
-The server will start on port 3000 (or configured port).
-
-### Frontend Application
-
-Open a new terminal:
-
-```bash
-cd online-store
-npm install
-npm start
-```
-
-The Angular app will start at `http://localhost:4200`.
-
-### Running Both Together
-
-You need to run both the server and the frontend simultaneously in separate terminals.
+ng serve

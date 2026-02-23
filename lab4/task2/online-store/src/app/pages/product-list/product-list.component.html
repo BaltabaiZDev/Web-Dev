@@ -1,0 +1,23 @@
+<section class="page-header">
+  <h2>Тауарлар каталогы</h2>
+  <p>
+    Kaspi.kz сілтемелері бар 10+ өнім карточкасы, галерея және share функциясы.
+  </p>
+</section>
+
+@if (lastShareMessage) {
+  <div class="share-info">
+    {{ lastShareMessage }}
+  </div>
+}
+
+<section class="grid">
+  @for (product of products; track product.id) {
+    <app-product-card
+      [product]="product"
+      (shareClicked)="onShare($event)"
+    />
+  } @empty {
+    <p>Тауарлар табылмады.</p>
+  }
+</section>
