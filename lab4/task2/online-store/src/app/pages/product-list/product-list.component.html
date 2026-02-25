@@ -1,8 +1,25 @@
 <section class="page-header">
-  <h2>Тауарлар каталогы</h2>
-  <p>
-    Kaspi.kz сілтемелері бар 10+ өнім карточкасы, галерея және share функциясы.
-  </p>
+  <div class="header-row">
+    <div>
+      <h2>Product Catalog</h2>
+      <p>
+        10+ product cards with Kaspi.kz links, gallery, and sharing functionality.
+      </p>
+    </div>
+
+    <div class="sort-box">
+      <label for="sortSelect">Sort by price:</label>
+      <select
+        id="sortSelect"
+        [value]="selectedSort"
+        (change)="onSortChange($any($event.target).value)"
+      >
+        <option value="default">Default</option>
+        <option value="price-asc">Low to High</option>
+        <option value="price-desc">High to Low</option>
+      </select>
+    </div>
+  </div>
 </section>
 
 @if (lastShareMessage) {
@@ -18,6 +35,6 @@
       (shareClicked)="onShare($event)"
     />
   } @empty {
-    <p>Тауарлар табылмады.</p>
+    <p>No products found.</p>
   }
 </section>

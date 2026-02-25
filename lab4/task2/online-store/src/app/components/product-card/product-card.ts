@@ -40,6 +40,7 @@ export class ProductCardComponent {
     this.selectedImageIndex.set(index);
   }
 
+
   prevImage(): void {
     const images = this.product().images;
     if (!images?.length) return;

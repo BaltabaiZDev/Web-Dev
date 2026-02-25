@@ -7,6 +7,8 @@ import {
   ShareEvent,
 } from '../../components/product-card/product-card';
 
+type SortOption = 'default' | 'price-asc' | 'price-desc';
+
 @Component({
   selector: 'app-product-list',
   standalone: true,
@@ -16,7 +18,10 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent {
-  products: Product[] = PRODUCTS;
+  readonly allProducts: Product[] = PRODUCTS;
+  products: Product[] = [...PRODUCTS];
+
+  selectedSort: SortOption = 'default';
   lastShareMessage = '';
 
   onShare(event: ShareEvent): void {
@@ -28,7 +33,29 @@ export class ProductListComponent {
 
     this.lastShareMessage = `${
       event.channel === 'whatsapp' ? 'WhatsApp' : 'Telegram'
-    } арқылы бөлісу ашылды: ${event.product.name}`;
+    } share opened: ${event.product.name}`;
+  }
+
+  onSortChange(value: string): void {
+    this.selectedSort = value as SortOption;
+    this.applySort();
+  }
+
+  private applySort(): void {
+    const list = [...this.allProducts];
+
+    switch (this.selectedSort) {
+      case 'price-asc':
+        list.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-desc':
+        list.sort((a, b) => b.price - a.price);
+        break;
+      default:
+        break;
+    }
+
+    this.products = list;
   }
 
   private buildShareUrl(channel: ShareChannel, product: Product): string {
